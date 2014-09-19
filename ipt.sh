@@ -26,3 +26,4 @@ iptables -A WEB_BROWSING_OUT -p tcp -m tcp --dport 80 -j ACCEPT
 iptables -A WEB_BROWSING_OUT -p udp -m udp --dport 53 -j ACCEPT
 iptables -A WEB_BROWSING_OUT -p tcp -m tcp --dport 443 -j ACCEPT
 iptables -A WEB_BROWSING_OUT -j LOG_REJECT
+iptables-save > /etc/sysconfig/iptables
