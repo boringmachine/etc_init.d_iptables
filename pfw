@@ -1,4 +1,9 @@
 #!/bin/sh
+# chkconfig: 2345 95 20
+# description: auto restore iptables rules
+# restore iptables rules from /etc/sysconfig/iptables
+# processname: pfw
+
 PROGRAM=/usr/sbin/iptables
 
 FIREWALL=`/bin/basename $PROGRAM`

@@ -83,6 +83,7 @@ chmod +x ipt.sh
 chmod 755 pfw
 ./ipt.sh
 yes | cp pfw /etc/init.d/
+chkconfig --add pfw
 /etc/init.d/pfw start
 
 cd omake
@@ -98,6 +99,10 @@ perl -p -i -e 's/ROTATE/keep_logs/g' /etc/audit/auditd.conf
 yes | cp /etc/audit/audit.rules /etc/audit/audit.rules.old
 yes | cp audit.rules /etc/audit/audit.rules
 service auditd restart
+
+yes | yum install ruby ruby-devel gcc binutils
+yes | gem install rake
+yes | gem install bundle
 
 cd ..
 cd ..
