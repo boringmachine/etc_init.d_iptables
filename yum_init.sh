@@ -1,7 +1,6 @@
 #!/bin/sh
 
 yes | yum update
-yes | yum install cron
 if [ ! -f /etc/cron.daily/yum.cron ]; then
     touch /etc/cron.daily/yum.cron
     echo '#!/bin/sh' >> /etc/cron.daily/yum.cron

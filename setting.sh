@@ -12,7 +12,7 @@ cd etc_init.d_iptables
 ./prelink_init.sh &
 ./aide_init.sh &
 ./clamav_init.sh &
-./rsyslog_init.sh &
+#./rsyslog_init.sh &
 ./lynis_init.sh & 
 ./iptables_init.sh &
 ./sysctl_init.sh &
