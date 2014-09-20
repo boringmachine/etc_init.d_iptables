@@ -19,8 +19,9 @@ cd etc_init.d_iptables
 ./lynis_init.sh
 ./iptables_init.sh
 ./sysctl_init.sh
-./audit.sh
+./audit_init.sh
 
+cd ..
 cd ..
 yes | rm -r ${DIR}
 
